@@ -28,6 +28,7 @@ class logInViewController: UIViewController {
         }
         
         present(HomeViewController, animated: true, completion: nil)
+        
     }
     
 

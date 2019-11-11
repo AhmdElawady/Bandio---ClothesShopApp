@@ -835,13 +835,13 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xbh-AI-aRX">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xbh-AI-aRX">
                                 <rect key="frame" x="0.0" y="154" width="414" height="120"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="6Fv-OE-93W"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="F2A-Yw-iYm">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="F2A-Yw-iYm">
                                     <size key="itemSize" width="212" height="98"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -849,7 +849,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="Fcs-nx-7zS">
-                                        <rect key="frame" x="101" y="0.0" width="212" height="98"/>
+                                        <rect key="frame" x="0.0" y="11" width="212" height="98"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WIq-0z-frC">
                                             <rect key="frame" x="0.0" y="0.0" width="212" height="98"/>
@@ -889,6 +889,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rjS-1H-6Ud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3476.811594202899" y="101.78571428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kNq-cs-0Fa">
+            <objects>
+                <viewController id="nKj-Va-xxB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Efm-HY-YLA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="qfg-DU-Twa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEh-Ss-EL4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4481" y="100"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FIX-ni-HQV">

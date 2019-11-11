@@ -38,10 +38,7 @@ class HomeViewController: UIViewController {
         self.collectionView.register(HomeCellNib, forCellWithReuseIdentifier: "HomeCollectionCell")
         
         let SliderCellNib = UINib(nibName: "SliderCell", bundle: nil)
-        self.collectionView.register(SliderCellNib, forCellWithReuseIdentifier: "SliderCell")
-        
-        self.view.addSubview(collectionView)
-        self.view.addSubview(imageSliderCollectionView)
+        self.imageSliderCollectionView.register(SliderCellNib, forCellWithReuseIdentifier: "SliderCell")
         
     }
     

@@ -1,0 +1,6 @@
+framework module Pods_Online_Shop_App {
+  umbrella header "Pods-Online Shop App-umbrella.h"
+
+  export *
+  module * { export * }
+}

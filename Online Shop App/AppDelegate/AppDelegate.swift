@@ -11,10 +11,15 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    var window: UIWindow?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+//         Override point for customization after application launch.
+//        if Helper.getAuthToken() != nil {
+//            print("your token saved")
+//            let homePage = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SWRevealViewController") as! SWRevealViewController
+//            window?.rootViewController = homePage
+//        }
         return true
     }
 

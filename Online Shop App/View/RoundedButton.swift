@@ -16,8 +16,6 @@ class RoundedButton: UIButton {
     @IBInspectable var borderWidth: CGFloat = 2
     
     @IBInspectable var borderColor: UIColor = UIColor.red
-    
-    
 
     
     override func awakeFromNib() {

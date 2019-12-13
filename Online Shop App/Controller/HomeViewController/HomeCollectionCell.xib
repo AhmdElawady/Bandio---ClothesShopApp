@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="HomeCollectionCell" reuseIdentifier="HomeCollectionCell" id="gTV-IL-0wX" customClass="HomeCollectionCell" customModule="Online_Shop_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="249" height="371"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="249" height="371"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y7D-dZ-Sth">
+                        <rect key="frame" x="10" y="10" width="229" height="330"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEST SELLER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uec-T0-0bw">
+                        <rect key="frame" x="83" y="348" width="83" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="uec-T0-0bw" firstAttribute="top" secondItem="Y7D-dZ-Sth" secondAttribute="bottom" constant="8" id="8ld-YE-Kj6"/>
+                <constraint firstItem="Y7D-dZ-Sth" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="SBt-im-5Xr"/>
+                <constraint firstAttribute="trailing" secondItem="Y7D-dZ-Sth" secondAttribute="trailing" constant="10" id="ZMm-wp-0PN"/>
+                <constraint firstItem="uec-T0-0bw" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="gXB-7W-V12"/>
+                <constraint firstAttribute="bottom" secondItem="uec-T0-0bw" secondAttribute="bottom" constant="7" id="imp-cS-LvS"/>
+                <constraint firstItem="Y7D-dZ-Sth" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="uMF-j5-iNJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="247" height="373"/>
+            <connections>
+                <outlet property="productImage" destination="Y7D-dZ-Sth" id="ZlI-fP-gOQ"/>
+                <outlet property="titleLabel" destination="uec-T0-0bw" id="EdA-Ae-E6d"/>
+            </connections>
+            <point key="canvasLocation" x="-115.21739130434783" y="-73.995535714285708"/>
+        </collectionViewCell>
+    </objects>
+</document>

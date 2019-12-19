@@ -16,4 +16,6 @@ struct URLs {
     static let homeUrl = baseUrl + "/home"
     static let productUrl = baseUrl + "/product"
     static let detailsUrl = baseUrl + "/details"
+    static let addCartUrl = baseUrl + "/bag"
+    static let cartURL = baseUrl + "/basket"
 }

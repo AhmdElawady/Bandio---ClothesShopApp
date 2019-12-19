@@ -14,8 +14,9 @@ class ProductDetailsAPI {
     
     static var instance = ProductDetailsAPI()
     
-    var ProductDetailsData = [ProductDetailsModel]()
-    var imageData = [imagesModel]()
+    var ProductDetailsData = ProductDetailsModel()
+    var imageData = [String]()
+    var sizeData = [String]()
     
     func fetchDetailsData(productID: Int, completion: @escaping (_ Success: Bool) -> ()) {
         let url = URLs.detailsUrl
@@ -31,43 +32,30 @@ class ProductDetailsAPI {
                 let json = JSON(value)
                 
                 // parse Details data
-                guard let detailsArray = json["product"].array else {
-                    completion(false)
-                    return
-                }
-                self.ProductDetailsData = []
-                for item in detailsArray {
-                    guard let item = item.dictionary else {
-                        completion(false)
-                        return
+                self.ProductDetailsData.id = json["product"]["id"].int
+                if let imageArray = json["product"]["img"].array {
+                    self.imageData = []
+                    for image in imageArray {
+                        let url = image["img"].stringValue
+                        print(url)
+                        self.imageData.append(url)
                     }
-                    var model = ProductDetailsModel()
-
-                    model.id = item["id"]?.int
-                    model.images = item["img"]?.arrayObject as? [imagesModel]
-                    model.text = item["text"]?.string
-                    model.price = item["price"]?.string
-                    model.oldPrice = item["old_price"]?.string
-                    model.offer = item["offer"]?.string
-                    model.sizes = item["size"]?.arrayObject as? [String]
-                    model.rate = item["rate"]?.string
-                    model.numRate = item["num_rate"]?.int
-
-                    self.ProductDetailsData.append(model)
-
-                    print(self.ProductDetailsData)
-                    print(self.imageData)
                 }
-                guard let images = json["product"]["img"].array else {
-                    completion(false)
-                    return
+                self.ProductDetailsData.text = json["product"]["text"].string
+                self.ProductDetailsData.price = json["product"]["price"].string
+                self.ProductDetailsData.oldPrice = json["product"]["old_price"].string
+                self.ProductDetailsData.offer = json["product"]["offer"].string
+                if let sizeArray = json["product"]["size"].array {
+                    self.sizeData = []
+                    for size in sizeArray {
+                        let size = size["size"].stringValue
+                        print(size)
+                        self.sizeData.append(size)
+                    }
                 }
-                for img in images {
-                    var data = imagesModel()
-                    data.image = img["img"].string
-                    self.imageData.append(data)
-                }
-
+                self.ProductDetailsData.rate = json["product"]["rate"].string
+                self.ProductDetailsData.numRate = json["product"]["num_rate"].int
+                
                 completion(true)
                 
             case .failure(let error):

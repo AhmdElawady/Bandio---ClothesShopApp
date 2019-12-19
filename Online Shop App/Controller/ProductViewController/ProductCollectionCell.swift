@@ -20,14 +20,22 @@ class ProductCollectionCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setHashLabel()
     }
     
     func configCell(productData: ProductModel) {
-        priceLabel.text = productData.price
-        oldPriceLabel.text = productData.oldPrice
+        priceLabel.text = "US$\(productData.price!)"
+        oldPriceLabel.text = "US$\(productData.oldPrice!)"
         if let image = productData.image {
             imageCell.kf.indicatorType = .activity
             self.imageCell.kf.setImage(with: URL(string: image))
         }
+    }
+    
+    func setHashLabel() {
+        let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: "ss")
+
+            attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
+        oldPriceLabel.attributedText = attributeString
     }
 }

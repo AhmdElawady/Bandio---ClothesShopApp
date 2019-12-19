@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,18 +19,26 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K8D-CM-XNU">
                         <rect key="frame" x="0.0" y="0.0" width="309" height="303"/>
                     </imageView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="l9M-Sm-wmV">
+                        <rect key="frame" x="20" y="246" width="39" height="37"/>
+                        <color key="pageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="currentPageIndicatorTintColor" red="0.71662833120000002" green="0.15010852259999999" blue="0.28243528880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </pageControl>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="l9M-Sm-wmV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="1IT-hk-cJH"/>
                 <constraint firstAttribute="bottom" secondItem="K8D-CM-XNU" secondAttribute="bottom" id="2Vn-pi-NE9"/>
                 <constraint firstItem="K8D-CM-XNU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9jD-sp-UJR"/>
                 <constraint firstAttribute="trailing" secondItem="K8D-CM-XNU" secondAttribute="trailing" id="Ady-SF-Gz6"/>
+                <constraint firstAttribute="bottom" secondItem="l9M-Sm-wmV" secondAttribute="bottom" constant="20" id="Nwv-KB-Xkt"/>
                 <constraint firstItem="K8D-CM-XNU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ySF-4K-JNE"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="309" height="303"/>
             <connections>
                 <outlet property="imageCell" destination="K8D-CM-XNU" id="9wb-Ba-I41"/>
+                <outlet property="pageControl" destination="l9M-Sm-wmV" id="3WU-Ow-f8b"/>
             </connections>
             <point key="canvasLocation" x="68.840579710144937" y="59.933035714285708"/>
         </collectionViewCell>

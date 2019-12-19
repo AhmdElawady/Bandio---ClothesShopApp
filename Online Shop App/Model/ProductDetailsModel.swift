@@ -10,7 +10,7 @@ import Foundation
 
 struct ProductDetailsModel {
     var id: Int?
-    var images: [imagesModel]?
+    var images: [String]?
     var text: String?
     var price: String?
     var oldPrice: String?
@@ -20,6 +20,3 @@ struct ProductDetailsModel {
     var numRate: Int?
 }
 
-struct imagesModel {
-    var image: String?
-}

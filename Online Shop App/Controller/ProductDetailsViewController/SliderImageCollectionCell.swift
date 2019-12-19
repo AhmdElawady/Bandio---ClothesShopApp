@@ -12,17 +12,17 @@ import Kingfisher
 class SliderImageCollectionCell: UICollectionViewCell {
 
     @IBOutlet weak var imageCell: UIImageView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
+    var curruntIndex = 0
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configData(imageData: imagesModel) {
-        print(imageData.image)
-        if let image = imageData.image {
+    func configData(imageData: String) {
+        if let image = URL(string: imageData) {
             imageCell.kf.indicatorType = .activity
-            self.imageCell.kf.setImage(with: URL(string: image))
+            self.imageCell.kf.setImage(with: image)
         }
     }
-
 }

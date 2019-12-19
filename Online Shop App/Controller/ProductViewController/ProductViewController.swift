@@ -50,10 +50,6 @@ extension ProductViewController: UICollectionViewDelegate, UICollectionViewDataS
         return cell
     }
     
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 2
-//    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: CGFloat((collectionView.frame.size.width / 2) - 2), height: CGFloat(350))
     }
@@ -61,6 +57,7 @@ extension ProductViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let view = self.storyboard?.instantiateViewController(withIdentifier: "ProductDetailsViewController") as! ProductDetailsViewController
         view.productID = productData[indexPath.item].id!
+        print(view.productID)
         self.navigationController?.pushViewController(view, animated: true)
     }
 }
